@@ -1,0 +1,103 @@
+.listItem {
+    list-style: none;
+}
+
+.listItem a {
+    color: white;
+    font-family: Anton;
+    line-height: 2;
+    text-decoration: none;
+}
+
+.listItem a.active {
+    color: red;
+}
+
+.nav {
+    position: fixed;
+    width: 200px;
+    background-color: blue;
+    color: white;
+    font-family: Anton;
+    height: 100%;
+    top: 76px;
+    overflow: scroll;
+    transition: .3s linear;
+    z-index: 1000;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+.btn {
+    margin: 10px 10px 10px auto;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: none;
+}
+
+.btn span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    transition: .3s linear;
+}
+
+.btn span:nth-child(2),
+.btn span:nth-child(3) {
+    top: 12px
+}
+
+.btn span:nth-child(4) {
+    top: 24px
+}
+
+.nav.active .btn span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.nav.active .btn span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.nav.active .btn span:nth-child(1) {
+    display: none;
+}
+
+.nav.active .btn span:nth-child(4) {
+    display: none;
+}
+
+.nav.active {
+    left: 0;
+    width: 100%;
+}
+
+@media(max-width: 650px) {
+    .wrapper_items {
+        background-size: 80% 50%;
+        background-position: 75px 200px;
+    }
+}
+
+@media(max-width: 500px) {
+    .nav {
+        text-align: center;
+        left: -100%;
+        overflow: hidden;
+    }
+    .nav.active {
+        overflow: scroll;
+    }
+    .btn {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+}

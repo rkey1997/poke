@@ -1,0 +1,46 @@
+.inner_items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner {
+    width: 20%;
+    border: 10px solid black;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    font-family: Anton;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    background-color: rgb(255, 255, 255, .7);
+}
+
+.inner a {
+    text-decoration: none;
+}
+
+.inner img {
+    width: 200px;
+    height: 200px;
+}
+
+.pokInner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 1200px) {
+    .inner {
+        width: 175px;
+        font-size: 30px;
+    }
+    .inner img {
+        width: 175px;
+        height: 175px;
+    }
+}

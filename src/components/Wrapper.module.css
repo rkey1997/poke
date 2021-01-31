@@ -1,0 +1,111 @@
+    .header {
+        height: 75px;
+        width: 100%;
+        background-color: red;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        z-index: 101;
+        top: 0;
+    }
+    
+    .header input {
+        margin-left: 20px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid white;
+        outline: none;
+        color: white;
+        padding: 10px 5px;
+    }
+    
+    .header input::placeholder {
+        color: white;
+    }
+    
+    .sharOfPokemon img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 20px;
+    }
+    
+    .wrapper_items {
+        margin-top: 75px;
+        margin-left: 200px;
+        background-image: url('https://i.ytimg.com/vi/1WFLTVE9CUk/maxresdefault.jpg');
+        background-repeat: no-repeat;
+        background-size: 70% 100%;
+        background-position: 300px 75px;
+        background-attachment: fixed;
+        height: 100%;
+        background-color: black;
+        min-height: 100vh;
+    }
+    
+    .wrapper_items a {
+        text-decoration: none;
+    }
+    
+    @media(max-width: 1200px) {
+        .wrapper_items {
+            background-size: 70% 50%;
+            background-position: 240px 200px;
+            padding-left: 100px;
+        }
+    }
+    
+    @media(max-width: 850px) {
+        .wrapper_items {
+            background-size: 70% 50%;
+            background-position: 200px 200px;
+            /* padding: 0 150px; */
+            padding-left: 50px;
+        }
+    }
+    
+    @media(max-width: 760px) {
+        .wrapper_items {
+            padding-left: 150px;
+        }
+    }
+    
+    @media(max-width: 650px) {
+        .wrapper_items {
+            background-size: 80% 50%;
+            background-position: 75px 200px;
+        }
+        .wrapper_names {
+            left: -150px;
+        }
+        .wrapper_items {
+            margin-left: 0;
+            padding-left: 220px;
+        }
+    }
+    
+    @media(max-width: 500px) {
+        .wrapper_items {
+            margin-left: 0;
+            text-align: center;
+            padding-left: 150px;
+        }
+    }
+    
+    @media(max-width: 450px) {
+        .wrapper_items {
+            padding-left: 100px;
+        }
+    }
+    
+    @media(max-width: 390px) {
+        .wrapper_items {
+            padding-left: 90px;
+        }
+    }
+    
+    @media(max-width: 360px) {
+        .wrapper_items {
+            padding-left: 60px;
+        }
+    }
