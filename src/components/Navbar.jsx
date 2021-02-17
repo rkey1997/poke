@@ -26,7 +26,7 @@ const Navbar = (props) => {
             </div>
             <ul>{
                 props.pokemons.map((pokemon) => (
-                    <li className={s.listItem}>
+                    <li key={pokemon.name} className={s.listItem}>
                         <NavLink onClick={close} activeClassName={s.active} to={{ pathname: `/pokemon/${pokemon.name}`, state: pokemon.name }}>
                             {pokemon.name}
                         </NavLink>

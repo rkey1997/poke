@@ -3,7 +3,7 @@ import s from './Pokemon.module.css'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const Pokemon = (props) => {
+const Pokemon = () => {
     const location = useLocation();
     const [pokemon, setPokemon] = useState({})
     const [abilities, setAbilities] = useState([])
@@ -18,7 +18,6 @@ const Pokemon = (props) => {
                 axios.get(response?.data?.abilities[0]?.ability?.url)
                     .then(r => {
                         setAbilities(r.data.effect_entries)
-                        console.log(abilities)
                     })
             })
     }, [name])

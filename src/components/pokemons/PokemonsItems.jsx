@@ -8,7 +8,7 @@ const PokemonsItems = (props) => {
             {
                 props.arr.map((pokemon) => (
 
-                    <NavLink name={pokemon.name} to={`/pokemon/${pokemon.name}`}>
+                    <NavLink key={pokemon.name} name={pokemon.name} to={`/pokemon/${pokemon.name}`}>
                         <div className={s.inner}>
                             <div>
                                 <img className={s.jump} src={pokemon.pic} alt="" />
