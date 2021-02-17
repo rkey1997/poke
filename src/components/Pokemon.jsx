@@ -11,7 +11,6 @@ const Pokemon = (props) => {
     let name = url[2]
 
     const nameOf = () => {
-
         axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
             .then((response) => {
                 setPokemon(response.data)
@@ -22,7 +21,7 @@ const Pokemon = (props) => {
                     })
             })
     }
-    useEffect(() => nameOf(), [name])
+    useEffect(() => nameOf(), [name, nameOf])
     return (
         <div className={s.wrapper}>
             <div>
