@@ -10,7 +10,8 @@ const Pokemon = (props) => {
     let url = location.pathname.split('/')
     let name = url[2]
 
-    const nameOf = () => {
+
+    useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
             .then((response) => {
                 setPokemon(response.data)
@@ -20,8 +21,7 @@ const Pokemon = (props) => {
                         console.log(abilities)
                     })
             })
-    }
-    useEffect(() => nameOf(), [name, nameOf])
+    }, [name])
     return (
         <div className={s.wrapper}>
             <div>
@@ -41,7 +41,7 @@ const Pokemon = (props) => {
                         <div><span>base experience:</span><span className={s.pokExp}>{pokemon.base_experience}</span></div>
                         <div><span>weight:</span><span className={s.pokExp}>{pokemon.weight}</span></div>
                         <div><span>height:</span><span className={s.pokExp}>{pokemon.height}</span></div>
-                        <div><span>ability:</span><span  className={s.pokExp}>{abilities[1]?.effect}</span></div>
+                        <div><span>ability:</span><span className={s.pokExp}>{abilities[1]?.effect}</span></div>
                     </div>
                 </div>
             </div>
